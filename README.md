@@ -25,12 +25,6 @@
 
 ---
 
-<img src="public/assets/images(readMe)/3m.png">
-
-
-**Login Page**
-
----
 
 <img src="public/assets/images(readMe)/4m.png">
 
