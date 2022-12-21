@@ -3,12 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactStoreRequest;
+use App\Http\Requests\ContactUpdateRequest;
 use App\Http\Requests\ContractUpdateRequest;
 use App\Models\Contact;
+use App\Models\User;
+use Illuminate\Auth\Access\Gate;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $this->authorize('viewAny',Contact::class);
@@ -34,7 +43,7 @@ class ContactController extends Controller
 
         ]);
 
-        return view('dashboard',$contact);
+        return view('contact.create');
     }
 
     public function show(Contact $contact)
@@ -48,11 +57,13 @@ class ContactController extends Controller
         return view('contact.edit',compact('contact'));
     }
 
-    public function update(ContractUpdateRequest $request,$contact)
+    public function update(ContactUpdateRequest $request,$contact)
     {
-        $this->authorize('update',$contact);
+//        $this->authorize('update',$contact);
+
         $contact = Contact::query()->findOrFail($contact);
         $contact->updateOrFail($request->only(['name','user_id','company','birthday','description']));
+//        return dd($contact);
         return redirect()->route('contact.show',$contact)->with(['status','Update successfully!']);
     }
 

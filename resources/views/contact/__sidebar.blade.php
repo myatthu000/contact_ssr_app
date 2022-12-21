@@ -1,4 +1,4 @@
-<div class="pl-6 bg-gray-300 w-48 h-screen border-gray-400 border-r-2">
+<div class="pl-6 bg-gray-200 w-56 h-screen border-gray-400 border-r-2">
     <nav class="pt-4">
         <!--                Left Section-->
         <div class="dark:text-blue-900 font-bold pt-4 pb-8">
@@ -8,11 +8,6 @@
         <p class="pb-4 font-bold uppercase text-xs text-gray-500">Create</p>
         <div class="mb-8">
             <a href="{{ route('contact.create') }}">
-{{--
-
-hover:text-black border-r-4 border-blue-700 text-blue-700
-
---}}
                 <div class="flex py-2 hover:bg-blue-300 hover:text-black text-gray-500 {{ (request()->routeIs('contact.create')) ? 'hover:text-black border-r-4 border-blue-700 text-blue-700' : '' }}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
                         <line x1="12" y1="5" x2="12" y2="19"></line>

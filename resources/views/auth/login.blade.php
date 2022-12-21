@@ -2,7 +2,13 @@
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <div class="py-5 flex justify-center uppercase tracking-wide">
+                    <h1 class="text-blue-700 text-center"
+                        style=
+                        "font-family: 'Kanit', sans-serif;"
+                    >
+                    Contact Application</h1>
+                </div>
             </a>
         </x-slot>
 

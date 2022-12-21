@@ -1,16 +1,10 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Birthday') }}
-        </h2>
-    </x-slot>
-
-{{--    <h2 class="py-2 text-center justify-center items-center mb-1 bg-gray-200 dark:text-blue-900 font-bold">Birthdays In This Month</h2>--}}
 
     <div class="h-50 overflow-hidden">
+        <h3 class="py-3 px-5"> search by <b>"{{ request()->search }}"</b> </h3>
         @isset($contacts)
             @foreach($contacts as $contact)
-                @if($contact)
+                @if($contact->user_id == auth()->id())
                     <a href="{{ route('contact.show',$contact->id) }}">
                         <div class="py-3 px-5 border-b-2 border-blue-200 hover:bg-gray-50" id="{{ $contact->id }}">
                             <div class="flex justify-start items-center">
@@ -20,19 +14,22 @@
                                 <div class="text-xs font-semibold tracking-wide">
                                     <p>{{ $contact->name }}</p>
                                     <p class="text-gray-500">{{ substr($contact->company,0,20)."  ...." }}</p>
-
                                 </div>
                             </div>
                         </div>
                     </a>
-                @elseif(empty($contact))
-                    {{__('NO DATA')}}
+                @elseif($contact)
+                    <div class="bg-gray-100 px-5 py-3 w-full h-20 dark:text-black text-center flex justify-center items-center">
+                        Search not found.
+                    </div>
                 @endif
+
             @endforeach
-        @else
-            {{__('NO DATA')}}
+        @elseif($contacts)
+            <div class="bg-gray-100 px-5 py-3 w-full h-20 dark:text-black text-center flex justify-center items-center">
+                Search not found.
+            </div>
         @endisset
     </div>
-
 
 </x-app-layout>

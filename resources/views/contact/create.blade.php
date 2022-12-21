@@ -2,8 +2,8 @@
 {{--    @section('content')--}}
     <div class="py-2 px-5 mb-3 mt-8">
         <form action="{{ route("contact.store") }}" method="post">
+            @method('POST')
             @csrf
-{{--            @method('post')--}}
             <div class="relative mb-6">
 
                 <label for="name" class="absolute font-bold uppercase text-xs text-blue-700 @error('name') text-red-600 @enderror">
@@ -11,7 +11,8 @@
                 </label>
                 <input type="text" id="name" name="name"
                        class="border-b-2 border-0 pt-6 w-full border-gray-300 @error('name') border-red-600 @enderror focus:outline-none focus:border-b-2 focus:border-0 focus:border-blue-700"
-                       placeholder="">
+                       placeholder=""
+                        value="{{ old('name') }}">
                 @error('name')
                 <p class="font-semibold text-red-600">{{$message}}</p>
                 @enderror
@@ -25,7 +26,8 @@
                 </label>
                 <input type="email" id="email" name="email"
                        class="border-b-2 pt-6 border-0 w-full border-gray-300  @error('email') border-red-600 @enderror focus:outline-none focus:border-b-2 focus:border-0 focus:border-blue-700"
-                       placeholder="">
+                       placeholder=""
+                        value="{{ old('email') }}">
                 @error('email')
                 <p class="font-semibold text-red-600">{{$message}}</p>
                 @enderror
@@ -39,7 +41,8 @@
                 </label>
                 <input type="date" id="date" name="birthday"
                        class="border-b-2 border-0 pt-6 w-full border-gray-300 focus:outline-none @error('birthday') border-red-600 @enderror focus:border-b-2 focus:border-0 focus:border-blue-700"
-                       placeholder="">
+                       placeholder=""
+                        value="{{ old('birthday') }}">
                 @error('birthday')
                 <p class="font-semibold text-red-600">{{$message}}</p>
                 @enderror
@@ -53,7 +56,8 @@
                 </label>
                 <input type="text" id="company" name="company"
                        class="border-b-2 border-0 pt-6 w-full border-gray-300 focus:outline-none focus:border-b-2 @error('company') border-red-600 @enderror focus:border-0 focus:border-blue-700"
-                       placeholder="">
+                       placeholder=""
+                        value="{{ old('company') }}">
                 @error('company')
                 <p class="font-semibold text-red-600">{{$message}}</p>
                 @enderror
@@ -67,7 +71,8 @@
                 </label>
                 <input type="text" id="description" name="description"
                        class="border-b-2 border-0 pt-6 w-full border-gray-300 focus:outline-none @error('description') border-red-600 @enderror focus:border-b-2 focus:border-0 focus:border-blue-700"
-                       placeholder="">
+                       placeholder=""
+                        value="{{ old('description') }}">
                 @error('description')
                     <p class="font-semibold text-red-600">{{$message}}</p>
                 @enderror

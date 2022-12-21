@@ -1,7 +1,7 @@
 <x-app-layout>
     {{--    @section('content')--}}
     <div class="py-2 px-5 mb-3 mt-8">
-        <form action="{{ route("contact.update",$contact->id) }}" method="post">
+        <form action="{{ route("contact.update",$contact) }}" method="post">
             @method('PATCH')
             @csrf
             <div class="relative mb-6">

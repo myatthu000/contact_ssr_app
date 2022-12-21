@@ -54,7 +54,6 @@
                 <button form="delete_from_{{$contact->id}}" class="mx-3 hover:bg-red-400 px-3 py-1 rounded-lg hover:text-gray-800 dark:text-red-600">
                     Delete
                 </button>
-{{--                <a href="{{ route("contact.delete",$contact->id) }}" class="mx-3 hover:bg-red-400 px-3 py-1 rounded-lg hover:text-gray-800 dark:text-red-600">Delete</a>--}}
             </div>
         </div>
     @else
