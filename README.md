@@ -17,29 +17,47 @@
 
 <hr>
 
-<img src="1m.png" style="width: 100%;height: auto;">
+
 <img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
-<img src="public/assets/images(readMe)/1m.png">
+<img src="public/assets/images(readMe)/2m.png">
+
+**Welcome Page**
+
+---
+
+<img src="public/assets/images(readMe)/3m.png">
 
 
-### Premium Partners
+**Login Page**
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
+<img src="public/assets/images(readMe)/4m.png">
+
+**Birthday Page**
+
+---
+
+<img src="public/assets/images(readMe)/5m.png">
+
+**Detail Page**
+
+---
+
+<img src="public/assets/images(readMe)/6m.png">
+
+**Create Contact Page**
+
+---
+
+<img src="public/assets/images(readMe)/7m.png">
+
+**Contact List**
+
+---
+
+<img src="public/assets/images(readMe)/8m.png">
+
+**Search Page**
+
+---
